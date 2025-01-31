@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>অ্যাডমিন প্যানেল - ড্রপশিপিং ব্যবসা</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scroll Indicator -->
+    <div id="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>ড্রপশিপিং স্টোর</h1>
+                <p>আপনার ট্রাস্টেড ড্রপশিপিং পার্টনার</p>
+            </div>
+            <nav class="nav">
+                <button class="menu-toggle">মেনু</button>
+                <ul>
+                    <li><a href="#home">হোম</a></li>
+                    <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                    <li><a href="#products">পণ্যসমূহ</a></li>
+                    <li><a href="#contact">যোগাযোগ</a></li>
+                    <li class="divider"></li>
+                    <li class="theme-switch">
+                        <label for="theme-toggle">ডার্ক মোড</label>
+                        <input type="checkbox" id="theme-toggle">
+                    </li>
+                    <li class="language-switch">
+                        <button id="language-toggle">Switch to English</button>
+                    </li>
+                    <li id="admin-link"><a href="#admin">অ্যাডমিন</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="hero reveal">
+            <h2>আমাদের ড্রপশিপিং স্টোরে স্বাগতম</h2>
+            <p>আমরা বিস্তৃত পণ্যসমূহ সরবরাহ করে আপনার ব্যবসাকে শক্তিশালী করি। দ্রুত ডেলিভারি এবং উচ্চ মানের সেবা আমাদের অন্যতম সেরা বৈশিষ্ট্য।</p>
+            <a href="#products" class="cta-button">আমাদের পণ্য দেখুন</a>
+        </section>
+
+        <section id="about" class="reveal">
+            <h2 class="section-title">আমাদের সম্পর্কে</h2>
+            <div class="about-content">
+                <p>আমরা একটি ড্রপশিপিং কোম্পানি যা বিশ্বের বিভিন্ন স্থানের থেকে সরাসরি পণ্য সরবরাহ করে। আমাদের উদ্দেশ্য হলো আপনার ব্যবসাকে সহজ, সাশ্রয়ী এবং দক্ষ ভাবে চালিত করা।</p>
+                <p>আমরা উচ্চ মানের পণ্য, দ্রুত ডেলিভারি, এবং সর্বোচ্চ গ্রাহক সেবা প্রদানের জন্য নিবেদিত।</p>
+            </div>
+        </section>
+
+        <section id="products" class="reveal">
+            <h2 class="section-title">আমাদের পণ্যসমূহ</h2>
+            <div class="products">
+                <!-- Product Card Template -->
+                <!-- এই টেমপ্লেটটি জাভাস্ক্রিপ্ট কোডের মাধ্যমে পূরণ হবে -->
+            </div>
+        </section>
+
+        <section id="testimonials" class="reveal">
+            <h2 class="section-title">টেস্টিমোনিয়ালস</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"আমাদের ব্যবসার জন্য এই ড্রপশিপিং কোম্পানি দুর্দান্ত সমাধান। তাদের সেবা এবং পণ্য আমাদের উন্নতির পথে সহায়ক হয়েছে।"</p>
+                    <h4>- জন ডো</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"তাদের সাথে কাজ করা একটি অসাধারণ অভিজ্ঞতা। আমরা তাদের পণ্যের মান এবং দ্রুত ডেলিভারি নিয়ে খুবই সন্তুষ্ট।"</p>
+                    <h4>- জেন স্মিথ</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact reveal">
+            <h2 class="section-title">যোগাযোগ</h2>
+            <form id="contact-form" action="send_email.php" method="POST">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <label for="name">নাম</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="contact-item">
+                        <label for="email">ইমেইল</label>
+                        <input type="email" id="email" name="email" value="mdnahidislam6714@gmail.com" required>
+                    </div>
+                    <div class="contact-item">
+                        <label for="message">বার্তা</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="contact-item">
+                        <button type="submit" class="cta-button">পাঠান</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section id="admin" class="reveal">
+            <div id="auth-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form id="login-form">
+                        <h3>Log In</h3>
+                        <input type="tel" id="login-phone" name="id" placeholder="ফোন নম্বর" required>
+                        <input type="password" id="login-password" name="password" placeholder="পাসওয়ার্ড" required>
+                        <button type="submit">Log In</button>
+                    </form>
+                </div>
+            </div>
+
+            <form id="product-form" style="display: none;">
+                <h3>পণ্য যোগ করুন</h3>
+                <input type="text" id="product-name" placeholder="পণ্যের নাম" required>
+                <input type="text" id="product-price" placeholder="পণ্যের দাম" required>
+                <input type="url" id="product-link" placeholder="লিংক URL" required> <!-- Link input for product -->
+                <input type="file" id="product-image" required> <!-- File input for image -->
+                <textarea id="product-description" placeholder="পণ্যের বিবরণ" required></textarea>
+                <button type="submit">পোস্ট করুন</button> <!-- Updated button text -->
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© ২০২৪ ড্রপশিপিং স্টোর। সর্বস্বত্ব সংরক্ষিত।</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">ফেসবুক</a>
+            <a href="https://twitter.com" target="_blank">টুইটার</a>
+            <a href="https://linkedin.com" target="_blank">লিংকডইন</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
